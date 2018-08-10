@@ -11,4 +11,15 @@ public class TrainingCenter extends Resource{
     public int getDormitories() {
         return dormitories;
     }
+
+    @Override
+    public void printInfo(){
+        System.out.println("Identifier: " + this.getIdentifier());
+        System.out.println("Dormitories: " + this.getDormitories());
+        if(this.isAvailable()){
+            System.out.println("This training center is currently available");
+        }
+        else System.out.println("This training center is not currently available");
+    }
+
 }

@@ -137,6 +137,17 @@ public class AssociateMenu {
 
     public static void listAssociates(ArrayList<Associate> juniors, ArrayList<Associate> seniors,
                                       ArrayList<Associate> elites) {
-
+        for (int i = 0; i<juniors.size(); i++){
+            System.out.println("Junior associate number " + (i+1));
+            juniors.get(i).printInfo();
+        }
+        for (int i = 0; i<seniors.size(); i++){
+            System.out.println("Senior associate number " + (i+1));
+            seniors.get(i).printInfo();
+        }
+        for (int i = 0; i<elites.size(); i++){
+            System.out.println("Elite associate number " + (i+1));
+            elites.get(i).printInfo();
+        }
     }
 }

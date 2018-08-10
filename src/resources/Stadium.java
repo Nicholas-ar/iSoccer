@@ -35,4 +35,17 @@ public class Stadium extends Resource{
     public void setSnackBars(int snackBars) {
         this.snackBars = snackBars;
     }
+
+    @Override
+    public void printInfo(){
+        System.out.println("Identifier: " + this.getIdentifier());
+        System.out.println("Supported espectators: " + this.getSupportedEspectators());
+        System.out.println("Restrooms: " + this.getRestrooms());
+        System.out.println("Snack bars: " + this.getSnackBars());
+        if(this.isAvailable()){
+            System.out.println("This stadium is currently available");
+        }
+        else System.out.println("This stadium is not currently available");
+    }
+
 }

@@ -7,4 +7,12 @@ public class Medic extends Employee {
         super(fullName, email, cpf, phoneNumber, salary);
         this.crm = crm;
     }
+
+    public int getCrm() {
+        return crm;
+    }
+
+    public void setCrm(int crm) {
+        this.crm = crm;
+    }
 }

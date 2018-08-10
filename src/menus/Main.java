@@ -216,18 +216,26 @@ public class Main {
                         type = MainMenus.reportMenu();
                         switch (type){
                             case "1":
+                                EmployeeMenu.listTeam(players,coaches);
                                 break;
                             case "2":
+                                EmployeeMenu.listAblePlayers(players);
                                 break;
                             case "3":
+                                EmployeeMenu.listUnablePlayers(players);
                                 break;
                             case "4":
+                                EmployeeMenu.listEmployees(drivers,medics,players,coaches,cooks,lawyers,physicalPreparers,
+                                        presidents);
                                 break;
                             case "5":
+                                ResourcesMenu.showBusesInfo(buses);
                                 break;
                             case "6":
+                                ResourcesMenu.showStadiumInfo(stadiums);
                                 break;
                             case "7":
+                                ResourcesMenu.showTCinfo(tcs);
                                 break;
                             case "8":
                                 AssociateMenu.quantityOfAssociates(juniors,seniors,elites);

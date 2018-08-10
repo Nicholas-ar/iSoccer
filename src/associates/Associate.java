@@ -17,16 +17,16 @@ public class Associate {
         this.defaulter = defaulter;
     }
 
-    @Override
-    public String toString() {
-        return "Associate{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", address='" + address + '\'' +
-                ", defaulter=" + defaulter +
-                '}';
+    public void printInfo(){
+        System.out.println("Name: " + this.name);
+        System.out.println("Email: " + this.email);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Phone number: " + this.phoneNumber);
+        System.out.println("Address: " + this.address);
+        if (this.defaulter){
+            System.out.println("This associate is currently defaulting");
+        }
+        else System.out.println("This associate is not currently defaulting");
     }
 
     public void setName(String name) {

@@ -25,6 +25,14 @@ public class Resource {
         this.identifier = identifier;
     }
 
+    public void printInfo(){
+        System.out.println("Identifier: " + this.getIdentifier());
+        if(this.isAvailable()){
+            System.out.println("This bus is currently available");
+        }
+        else System.out.println("This bus is not currently available");
+    }
+
 
 
 

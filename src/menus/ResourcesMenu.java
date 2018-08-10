@@ -93,8 +93,8 @@ public class ResourcesMenu {
 
     public static void checkBusAvailability(ArrayList<Resource> buses) {
         int availableBuses = 0;
-        for (int i = 0; i<buses.size(); i++){
-            if (buses.get(i).isAvailable()){
+        for (Resource buse : buses) {
+            if (buse.isAvailable()) {
                 availableBuses++;
             }
         }
@@ -171,6 +171,33 @@ public class ResourcesMenu {
             }
         }
         return stadiums;
+    }
+
+    public static void showBusesInfo(ArrayList<Resource> buses) {
+
+        for (int i = 0; i<buses.size(); i++){
+            System.out.println("Bus number " + (i+1));
+            buses.get(i).printInfo();
+        }
+
+    }
+
+    public static void showStadiumInfo(ArrayList<Stadium> stadiums) {
+
+        for (int i = 0; i<stadiums.size(); i++){
+            System.out.println("Stadium center number " + (i+1));
+            stadiums.get(i).printInfo();
+        }
+
+    }
+
+    public static void showTCinfo(ArrayList<TrainingCenter> tcs) {
+
+        for (int i = 0; i<tcs.size(); i++){
+            System.out.println("Training center number " + (i+1));
+            tcs.get(i).printInfo();
+        }
+
     }
 }
 
