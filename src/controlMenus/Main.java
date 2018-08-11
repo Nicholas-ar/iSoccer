@@ -1,4 +1,4 @@
-package menus;
+package controlMenus;
 
 import associates.Associate;
 import employees.*;
@@ -9,11 +9,14 @@ import java.util.Scanner;
 
 public class Main {
 
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         boolean on = true;
         boolean logged = false;
+        MainMenus mainMenu = new MainMenus();
+        EmployeeMenu employeeMenu = new EmployeeMenu();
+        ResourcesMenu resourceMenu = new ResourcesMenu();
+        AssociatesMenu associateMenu = new AssociatesMenu();
 
         ArrayList<Driver> drivers = new ArrayList();
         ArrayList<Medic> medics = new ArrayList();
@@ -37,11 +40,11 @@ public class Main {
         while (on) {
 
             while (!logged) {
-                logged = MainMenus.loginMenu();
+                logged = mainMenu.loginMenu();
             }
             while (logged)
             {
-                MainMenus.mainMenu();
+                mainMenu.mainMenu();
                 String type;
                 String searchCpf;
                 int associateType;
@@ -49,11 +52,11 @@ public class Main {
                 String option = input.nextLine();
                 switch (option){
                     case "1":
-                        type = EmployeeMenu.addEmployeeType();
+                        type = employeeMenu.addEmployeeType();
                         switch (type){
                             case "1":
-                                Employee tempEmployee = EmployeeMenu.createGenericEmployee();
-                                String choice = EmployeeMenu.especifyEmployeeType();
+                                Employee tempEmployee = employeeMenu.createGenericEmployee();
+                                String choice = employeeMenu.especifyEmployeeType();
                                 switch (choice){
                                     case "1":
                                         presidents.add(tempEmployee);
@@ -71,22 +74,22 @@ public class Main {
                                         lawyers.add(tempEmployee);
                                         break;
                                 }
-                                EmployeeMenu.successMessage();
+                                employeeMenu.successMessage();
                                 break;
                             case "2":
-                                Medic tempMedic = EmployeeMenu.createMedic();
+                                Medic tempMedic = employeeMenu.createMedic();
                                 medics.add(tempMedic);
-                                EmployeeMenu.successMessage();
+                                employeeMenu.successMessage();
                                 break;
                             case "3":
-                                Driver tempDriver = EmployeeMenu.createDriver();
+                                Driver tempDriver = employeeMenu.createDriver();
                                 drivers.add(tempDriver);
-                                EmployeeMenu.successMessage();
+                                employeeMenu.successMessage();
                                 break;
                             case "4":
-                                Player tempPlayer = EmployeeMenu.createPlayer();
+                                Player tempPlayer = employeeMenu.createPlayer();
                                 players.add(tempPlayer);
-                                EmployeeMenu.successMessage();
+                                employeeMenu.successMessage();
                                 break;
                             default:
                                 System.out.println("Invalid option");
@@ -95,25 +98,25 @@ public class Main {
 
                         break;
                     case "2":
-                        type = AssociateMenu.addAssociateType();
+                        type = associateMenu.addAssociateType();
                         Associate tempAssociate;
                         switch (type){
                             case "1":
-                                tempAssociate = AssociateMenu.createAssociate();
+                                tempAssociate = associateMenu.createAssociate();
                                 juniors.add(tempAssociate);
-                                AssociateMenu.successMessage();
+                                associateMenu.successMessage();
                                 break;
 
                             case "2":
-                                tempAssociate = AssociateMenu.createAssociate();
+                                tempAssociate = associateMenu.createAssociate();
                                 seniors.add(tempAssociate);
-                                AssociateMenu.successMessage();
+                                associateMenu.successMessage();
                                 break;
 
                             case "3":
-                                tempAssociate = AssociateMenu.createAssociate();
+                                tempAssociate = associateMenu.createAssociate();
                                 elites.add(tempAssociate);
-                                AssociateMenu.successMessage();
+                                associateMenu.successMessage();
                                 break;
 
                             default:
@@ -122,41 +125,38 @@ public class Main {
                         }
                         break;
                     case "3":
-                        type = AssociateMenu.changeAssociateStatus();
-                        searchCpf = AssociateMenu.chooseSearchCpf();
+                        type = associateMenu.changeAssociateStatus();
+                        searchCpf = associateMenu.chooseSearchCpf();
                         switch (type){
                             case "1":
-                                for(int i = 0; i<juniors.size();i++){
-                                    if(juniors.get(i).getCpf().equals(searchCpf)){
-                                        if (juniors.get(i).getDefaulter()){
-                                            juniors.get(i).setDefaulter(false);
-                                        }
-                                        else {
-                                            juniors.get(i).setDefaulter(true);
+                                for (Associate junior : juniors) {
+                                    if (junior.getCpf().equals(searchCpf)) {
+                                        if (junior.getDefaulter()) {
+                                            junior.setDefaulter(false);
+                                        } else {
+                                            junior.setDefaulter(true);
                                         }
                                     }
                                 }
                                 break;
                             case "2":
-                                for(int i = 0; i<seniors.size();i++){
-                                    if(seniors.get(i).getCpf().equals(searchCpf)){
-                                        if (seniors.get(i).getDefaulter()){
-                                            seniors.get(i).setDefaulter(false);
-                                        }
-                                        else {
-                                            seniors.get(i).setDefaulter(true);
+                                for (Associate senior : seniors) {
+                                    if (senior.getCpf().equals(searchCpf)) {
+                                        if (senior.getDefaulter()) {
+                                            senior.setDefaulter(false);
+                                        } else {
+                                            senior.setDefaulter(true);
                                         }
                                     }
                                 }
                                 break;
                             case "3":
-                                for(int i = 0; i<elites.size();i++){
-                                    if(elites.get(i).getCpf().equals(searchCpf)){
-                                        if (elites.get(i).getDefaulter()){
-                                            elites.get(i).setDefaulter(false);
-                                        }
-                                        else {
-                                            elites.get(i).setDefaulter(true);
+                                for (Associate elite : elites) {
+                                    if (elite.getCpf().equals(searchCpf)) {
+                                        if (elite.getDefaulter()) {
+                                            elite.setDefaulter(false);
+                                        } else {
+                                            elite.setDefaulter(true);
                                         }
                                     }
                                 }
@@ -167,87 +167,87 @@ public class Main {
 
                         break;
                     case "4":
-                        associateType = AssociateMenu.changeAssociateContribution();
-                        contributionAmount = AssociateMenu.newContributionValue();
+                        associateType = associateMenu.changeAssociateContribution();
+                        contributionAmount = associateMenu.newContributionValue();
                         contributionAmounts[associateType] = contributionAmount;
 
                         break;
                     case "5":
-                        type = ResourcesMenu.whichResource();
+                        type = resourceMenu.whichResource();
                         switch (type){
                             case "1":
-                                Resource tempBus = ResourcesMenu.createBus();
+                                Resource tempBus = resourceMenu.createBus();
                                 buses.add(tempBus);
                                 break;
                             case "2":
-                                Stadium tempStadium = ResourcesMenu.createStadium();
+                                Stadium tempStadium = resourceMenu.createStadium();
                                 stadiums.add(tempStadium);
                                 break;
                             case "3":
-                                TrainingCenter tempTC = ResourcesMenu.createTC();
+                                TrainingCenter tempTC = resourceMenu.createTC();
                                 tcs.add(tempTC);
                                 break;
                         }
                         break;
                     case "6":
-                        type = ResourcesMenu.manageWhichResource();
+                        type = resourceMenu.manageWhichResource();
                         switch (type){
                             case "1":
-                                ResourcesMenu.checkBusAvailability(buses);
+                                resourceMenu.checkBusAvailability(buses);
                                 break;
                             case "2":
-                                ResourcesMenu.checkStadiumAvailability(stadiums);
+                                resourceMenu.checkStadiumAvailability(stadiums);
                                 break;
                             case "3":
-                                stadiums = ResourcesMenu.changeStadiumSupported(stadiums);
+                                stadiums = resourceMenu.changeStadiumSupported(stadiums);
                                 break;
                             case "4":
-                                stadiums = ResourcesMenu.changeStadiumRestrooms(stadiums);
+                                stadiums = resourceMenu.changeStadiumRestrooms(stadiums);
                                 break;
                             case "5":
-                                stadiums = ResourcesMenu.changeStadiumSnacks(stadiums);
+                                stadiums = resourceMenu.changeStadiumSnacks(stadiums);
                                 break;
                             case "6":
-                                ResourcesMenu.checkTCAvailability(tcs);
+                                resourceMenu.checkTCAvailability(tcs);
                                 break;
                         }
                         break;
                     case "7":
-                        type = MainMenus.reportMenu();
+                        type = mainMenu.reportMenu();
                         switch (type){
                             case "1":
-                                EmployeeMenu.listTeam(players,coaches);
+                                employeeMenu.listTeam(players,coaches);
                                 break;
                             case "2":
-                                EmployeeMenu.listAblePlayers(players);
+                                employeeMenu.listAblePlayers(players);
                                 break;
                             case "3":
-                                EmployeeMenu.listUnablePlayers(players);
+                                employeeMenu.listUnablePlayers(players);
                                 break;
                             case "4":
-                                EmployeeMenu.listEmployees(drivers,medics,players,coaches,cooks,lawyers,physicalPreparers,
+                                employeeMenu.listEmployees(drivers,medics,players,coaches,cooks,lawyers,physicalPreparers,
                                         presidents);
                                 break;
                             case "5":
-                                ResourcesMenu.showBusesInfo(buses);
+                                resourceMenu.showBusesInfo(buses);
                                 break;
                             case "6":
-                                ResourcesMenu.showStadiumInfo(stadiums);
+                                resourceMenu.showStadiumInfo(stadiums);
                                 break;
                             case "7":
-                                ResourcesMenu.showTCinfo(tcs);
+                                resourceMenu.showTCinfo(tcs);
                                 break;
                             case "8":
-                                AssociateMenu.quantityOfAssociates(juniors,seniors,elites);
+                                associateMenu.quantityOfAssociates(juniors,seniors,elites);
                                 break;
                             case "9":
-                                AssociateMenu.nonDefaultingAssociates(juniors,seniors,elites);
+                                associateMenu.nonDefaultingAssociates(juniors,seniors,elites);
                                 break;
                             case "10":
-                                AssociateMenu.defaultingAssociates(juniors,seniors,elites);
+                                associateMenu.defaultingAssociates(juniors,seniors,elites);
                                 break;
                             case "11":
-                                AssociateMenu.listAssociates(juniors,seniors,elites);
+                                associateMenu.listAssociates(juniors,seniors,elites);
                                 break;
                         }
                         break;

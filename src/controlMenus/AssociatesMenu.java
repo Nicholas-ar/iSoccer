@@ -1,13 +1,13 @@
-package menus;
+package controlMenus;
 
 import associates.Associate;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AssociateMenu {
+public class AssociatesMenu {
 
-    public static String addAssociateType(){
+    public String addAssociateType(){
         Scanner input = new Scanner(System.in);
         System.out.println("Choose the type of associate to add");
         System.out.println("(1)Junior");
@@ -18,7 +18,7 @@ public class AssociateMenu {
         return option;
     }
 
-    public static Associate createAssociate(){
+    public Associate createAssociate(){
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following information for the associate");
         System.out.println("Full name:");
@@ -36,11 +36,11 @@ public class AssociateMenu {
         return temp;
     }
 
-    public static void successMessage(){
+    public void successMessage(){
         System.out.println("Associate successfully added!");
     }
 
-    public static String changeAssociateStatus() {
+    public String changeAssociateStatus() {
         Scanner input = new Scanner(System.in);
         System.out.println("Choose the type of associate to change");
         System.out.println("(1)Junior");
@@ -51,7 +51,7 @@ public class AssociateMenu {
         return option;
     }
 
-    public static String chooseSearchCpf() {
+    public String chooseSearchCpf() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the CPF of associate to change");
         String cpf = input.next();
@@ -59,7 +59,7 @@ public class AssociateMenu {
     }
 
 
-    public static int changeAssociateContribution(){
+    public int changeAssociateContribution(){
         Scanner input = new Scanner(System.in);
         System.out.println("Choose the type of associate to change the contribution");
         System.out.println("(0)Junior");
@@ -71,14 +71,14 @@ public class AssociateMenu {
     }
 
 
-    public static double newContributionValue() {
+    public double newContributionValue() {
         System.out.println("Type the new contribution value:");
         Scanner input = new Scanner(System.in);
         double value = input.nextDouble();
         return value;
     }
 
-    public static void quantityOfAssociates(ArrayList<Associate> juniors,ArrayList<Associate> seniors,
+    public void quantityOfAssociates(ArrayList<Associate> juniors,ArrayList<Associate> seniors,
                                             ArrayList<Associate> elites) {
         int quantity = 0;
         quantity+=(juniors.size());
@@ -87,7 +87,7 @@ public class AssociateMenu {
         System.out.println("There are " + quantity +" associates.");
     }
 
-    public static void nonDefaultingAssociates(ArrayList<Associate> juniors,ArrayList<Associate> seniors,
+    public void nonDefaultingAssociates(ArrayList<Associate> juniors,ArrayList<Associate> seniors,
                                                ArrayList<Associate> elites) {
         int quantity = 0;
         for (int i = 0; i < juniors.size(); i++)
@@ -111,7 +111,7 @@ public class AssociateMenu {
         System.out.println("There are " + quantity + " defaulting associates.");
     }
 
-    public static void defaultingAssociates(ArrayList<Associate> juniors,ArrayList<Associate> seniors,
+    public void defaultingAssociates(ArrayList<Associate> juniors,ArrayList<Associate> seniors,
                                                ArrayList<Associate> elites) {
         int quantity = 0;
         for (int i = 0; i < juniors.size(); i++)
@@ -135,7 +135,7 @@ public class AssociateMenu {
         System.out.println("There are " + quantity + " non defaulting associates.");
     }
 
-    public static void listAssociates(ArrayList<Associate> juniors, ArrayList<Associate> seniors,
+    public void listAssociates(ArrayList<Associate> juniors, ArrayList<Associate> seniors,
                                       ArrayList<Associate> elites) {
         for (int i = 0; i<juniors.size(); i++){
             System.out.println("Junior associate number " + (i+1));

@@ -8,6 +8,11 @@ public class Medic extends Employee {
         this.crm = crm;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "CRM: " + crm + '\n';
+    }
+
     public int getCrm() {
         return crm;
     }

@@ -15,13 +15,23 @@ public class Employee {
         this.salary = salary;
     }
 
+    @Override
+    public String toString() {
+        return "Full name: " + fullName + '\n' +
+                "Email: " + email + '\n' +
+                "CPF: " + cpf + '\n' +
+                "Phone number: " + phoneNumber + '\n' +
+                "Salary: " + salary + '\n';
+    }
+
     public void printInfo(){
-        System.out.println("Full name: " + this.getFullName());
-        System.out.println("Email: " + this.getEmail());
+        System.out.println();
+        System.out.println("" + this.getEmail());
         System.out.println("CPF: " + this.getCpf());
         System.out.println("Phone number: " + this.getPhoneNumber());
-        System.out.println("Salary: " + this.getSalary());
+        System.out.println(" " + this.getSalary());
     }
+    //change to toString
 
     public String getFullName() {
         return fullName;

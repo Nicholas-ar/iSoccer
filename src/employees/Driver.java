@@ -8,6 +8,11 @@ public class Driver extends Employee {
         this.driverLicenseNumber = driverLicenseNumber;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "Driver license number: " + driverLicenseNumber + '\n';
+    }
+
     public int getDriverLicenseNumber() {
         return driverLicenseNumber;
     }

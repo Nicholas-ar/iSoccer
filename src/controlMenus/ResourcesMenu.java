@@ -1,4 +1,4 @@
-package menus;
+package controlMenus;
 
 import resources.Resource;
 import resources.Stadium;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class ResourcesMenu {
 
 
-    public static String whichResource() {
+    public String whichResource() {
         Scanner input = new Scanner(System.in);
         System.out.println("Choose amongst the resources");
         System.out.println("(1)Bus");
@@ -20,7 +20,7 @@ public class ResourcesMenu {
         return choice;
     }
 
-    public static Resource createBus() {
+    public Resource createBus() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following info for the new bus");
         System.out.println("Is the bus currently available?");
@@ -36,7 +36,7 @@ public class ResourcesMenu {
         return bus;
     }
 
-    public static Stadium createStadium() {
+    public Stadium createStadium() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following info for the new stadium");
         System.out.println("Is the stadium currently available?");
@@ -59,7 +59,7 @@ public class ResourcesMenu {
         return stadium;
     }
 
-    public static TrainingCenter createTC() {
+    public TrainingCenter createTC() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following info for the new training center");
         System.out.println("Is the training center currently available?");
@@ -78,7 +78,7 @@ public class ResourcesMenu {
         return tc;
     }
 
-    public static String manageWhichResource() {
+    public String manageWhichResource() {
         Scanner input = new Scanner(System.in);
         System.out.println("Choose an option:");
         System.out.println("(1)Check buses availability");
@@ -91,7 +91,7 @@ public class ResourcesMenu {
         return option;
     }
 
-    public static void checkBusAvailability(ArrayList<Resource> buses) {
+    public void checkBusAvailability(ArrayList<Resource> buses) {
         int availableBuses = 0;
         for (Resource buse : buses) {
             if (buse.isAvailable()) {
@@ -105,7 +105,7 @@ public class ResourcesMenu {
     }
 
 
-    public static void checkStadiumAvailability(ArrayList<Stadium> stadiums) {
+    public void checkStadiumAvailability(ArrayList<Stadium> stadiums) {
         int availableStadiums = 0;
         for (int i = 0; i<stadiums.size(); i++){
             if (stadiums.get(i).isAvailable()){
@@ -118,7 +118,7 @@ public class ResourcesMenu {
         else System.out.println("There is(are) " + availableStadiums +" available stadium(s)");
     }
 
-    public static void checkTCAvailability(ArrayList<TrainingCenter> tcs) {
+    public void checkTCAvailability(ArrayList<TrainingCenter> tcs) {
         int availableTCs = 0;
         for (int i = 0; i<tcs.size(); i++){
             if (tcs.get(i).isAvailable()){
@@ -131,7 +131,7 @@ public class ResourcesMenu {
         else System.out.println("There is(are) " + availableTCs +" available training center(s)");
     }
 
-    public static ArrayList<Stadium> changeStadiumSupported(ArrayList<Stadium> stadiums) {
+    public ArrayList<Stadium> changeStadiumSupported(ArrayList<Stadium> stadiums) {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the identifier of the stadium you wish to modify");
         String identifier = input.nextLine();
@@ -145,7 +145,7 @@ public class ResourcesMenu {
         return stadiums;
     }
 
-    public static ArrayList<Stadium> changeStadiumRestrooms(ArrayList<Stadium> stadiums) {
+    public ArrayList<Stadium> changeStadiumRestrooms(ArrayList<Stadium> stadiums) {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the identifier of the stadium you wish to modify");
         String identifier = input.nextLine();
@@ -159,7 +159,7 @@ public class ResourcesMenu {
         return stadiums;
     }
 
-    public static ArrayList<Stadium> changeStadiumSnacks(ArrayList<Stadium> stadiums) {
+    public ArrayList<Stadium> changeStadiumSnacks(ArrayList<Stadium> stadiums) {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the identifier of the stadium you wish to modify");
         String identifier = input.nextLine();
@@ -173,7 +173,7 @@ public class ResourcesMenu {
         return stadiums;
     }
 
-    public static void showBusesInfo(ArrayList<Resource> buses) {
+    public void showBusesInfo(ArrayList<Resource> buses) {
 
         for (int i = 0; i<buses.size(); i++){
             System.out.println("Bus number " + (i+1));
@@ -182,7 +182,7 @@ public class ResourcesMenu {
 
     }
 
-    public static void showStadiumInfo(ArrayList<Stadium> stadiums) {
+    public void showStadiumInfo(ArrayList<Stadium> stadiums) {
 
         for (int i = 0; i<stadiums.size(); i++){
             System.out.println("Stadium center number " + (i+1));
@@ -191,7 +191,7 @@ public class ResourcesMenu {
 
     }
 
-    public static void showTCinfo(ArrayList<TrainingCenter> tcs) {
+    public void showTCinfo(ArrayList<TrainingCenter> tcs) {
 
         for (int i = 0; i<tcs.size(); i++){
             System.out.println("Training center number " + (i+1));

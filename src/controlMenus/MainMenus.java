@@ -1,13 +1,13 @@
-package menus;
+package controlMenus;
 
 import java.util.Scanner;
 
 public class MainMenus {
 
-    private static String adminLogin = "Test";
-    private static String adminPassword = "1234";
+    private static String adminLogin = "abc";
+    private static String adminPassword = "123";
 
-    public static void mainMenu(){
+    public void mainMenu(){
         System.out.println("iSoccer - Main");
         System.out.println("Choose an option:");
         System.out.println("(1)Add employee");
@@ -21,7 +21,7 @@ public class MainMenus {
         System.out.println("(9)Shut down");
     }
 
-    public static boolean loginMenu(){
+    public boolean loginMenu(){
         Scanner input = new Scanner(System.in);
         System.out.println("iSoccer - Login");
         System.out.println("Login:");
@@ -38,7 +38,7 @@ public class MainMenus {
         }
     }
 
-    public static String reportMenu() {
+    public String reportMenu() {
         Scanner input = new Scanner(System.in);
         System.out.println("Choose an option:");
         System.out.println("(1)Show coach and players info");

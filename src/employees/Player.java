@@ -12,9 +12,11 @@ public class Player extends Employee {
     }
 
     @Override
-    public void printInfo(){
-        super.printInfo();
-        System.out.println("Player position: " + this.getPlayerPosition());
+    public String toString() {
+        if(canPlay)
+            return super.toString() + "Player position: " + playerPosition + '\n' + "This player can currently play" + '\n';
+        else
+            return super.toString() + "Player position: " + playerPosition + '\n' + "This player can't currently play" + '\n';
     }
 
     public String getPlayerPosition() {

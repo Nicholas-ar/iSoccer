@@ -1,4 +1,4 @@
-package menus;
+package controlMenus;
 
 import employees.*;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EmployeeMenu {
 
-    public static String addEmployeeType(){
+    public String addEmployeeType(){
         Scanner input = new Scanner(System.in);
         System.out.println("Choose the type of employee to add");
         System.out.println("(1)President, coach, physical preparer, cook or lawyer");
@@ -19,11 +19,11 @@ public class EmployeeMenu {
         return option;
     }
 
-    public static void successMessage(){
+    public void successMessage(){
         System.out.println("Employee successfully added!");
     }
 
-    public static Employee createGenericEmployee(){
+    public Employee createGenericEmployee(){
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following information for the employee");
         System.out.println("Full name:");
@@ -40,7 +40,7 @@ public class EmployeeMenu {
         return temp;
     }
 
-    public static String especifyEmployeeType() {
+    public String especifyEmployeeType() {
         System.out.println("Especify the employee type:");
         System.out.println("(1)President");
         System.out.println("(2)Coach");
@@ -52,7 +52,7 @@ public class EmployeeMenu {
         return choice;
     }
 
-    public static Medic createMedic() {
+    public Medic createMedic() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following information for the employee");
         System.out.println("Full name:");
@@ -71,7 +71,7 @@ public class EmployeeMenu {
         return temp;
     }
 
-    public static Driver createDriver() {
+    public Driver createDriver() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following information for the employee");
         System.out.println("Full name:");
@@ -90,7 +90,7 @@ public class EmployeeMenu {
         return temp;
     }
 
-    public static Player createPlayer() {
+    public Player createPlayer() {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the following information for the employee");
         System.out.println("Full name:");
@@ -111,71 +111,71 @@ public class EmployeeMenu {
     }
 
 
-    public static void listTeam(ArrayList<Player> players, ArrayList<Employee> coaches) {
+    public void listTeam(ArrayList<Player> players, ArrayList<Employee> coaches) {
         for (int i = 0; i<coaches.size(); i++){
             System.out.println("Coach number " + (i+1));
-            coaches.get(i).printInfo();
+            System.out.println(coaches.get(i).toString());
         }
         for (int i = 0; i<players.size(); i++){
             System.out.println("Player number " + (i+1));
-            players.get(i).printInfo();
+            System.out.println(players.get(i).toString());
         }
     }
 
-    public static void listAblePlayers(ArrayList<Player> players) {
+    public void listAblePlayers(ArrayList<Player> players) {
         int ablePlayers = 1;
         for (int i = 0; i<players.size(); i++){
             if (players.get(i).isCanPlay()){
                 System.out.println("Able player number " + ablePlayers);
-                players.get(i).printInfo();
+                System.out.println(players.get(i).toString());
             }
         }
     }
 
-    public static void listUnablePlayers(ArrayList<Player> players) {
+    public void listUnablePlayers(ArrayList<Player> players) {
         int unablePlayers = 1;
         for (int i = 0; i<players.size(); i++){
             if (!players.get(i).isCanPlay()){
                 System.out.println("Unable player number " + unablePlayers);
-                players.get(i).printInfo();
+                System.out.println(players.get(i).toString());
             }
         }
     }
 
-    public static void listEmployees(ArrayList<Driver> drivers,ArrayList<Medic> medics,ArrayList<Player> players,
+    public void listEmployees(ArrayList<Driver> drivers,ArrayList<Medic> medics,ArrayList<Player> players,
                                      ArrayList<Employee> coaches,ArrayList<Employee> cooks,ArrayList<Employee> lawyers,
                                      ArrayList<Employee> physicalPreparers,ArrayList<Employee> presidents) {
         for (int i = 0; i<presidents.size(); i++){
             System.out.println("President number " + (i+1));
-            presidents.get(i).printInfo();
+            System.out.println(presidents.get(i).toString());
         }
         for (int i = 0; i<coaches.size(); i++){
             System.out.println("Coach number " + (i+1));
-            coaches.get(i).printInfo();
+            System.out.println(coaches.get(i).toString());
         }
         for (int i = 0; i<players.size(); i++){
             System.out.println("Player number " + (i+1));
-            players.get(i).printInfo();
+            System.out.println(players.get(i).toString());
         }
         for (int i = 0; i<physicalPreparers.size(); i++){
             System.out.println("Physical preparer number " + (i+1));
-            physicalPreparers.get(i).printInfo();
+            System.out.println(physicalPreparers.get(i).toString());
         }
         for (int i = 0; i<medics.size(); i++){
             System.out.println("Medic number " + (i+1));
-            medics.get(i).printInfo();
+            System.out.println(medics.get(i).toString());
         }
         for (int i = 0; i<drivers.size(); i++){
             System.out.println("Driver number " + (i+1));
-            drivers.get(i).printInfo();
+            System.out.println(drivers.get(i).toString());
         }
         for (int i = 0; i<cooks.size(); i++){
             System.out.println("Cook number " + (i+1));
-            cooks.get(i).printInfo();
+            System.out.println(cooks.get(i).toString());
         }
         for (int i = 0; i<lawyers.size(); i++){
             System.out.println("Lawyer number " + (i+1));
-            lawyers.get(i).printInfo();
+            System.out.println(lawyers.get(i).toString());
         }
     }
 }
