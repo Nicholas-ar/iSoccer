@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5990dd3b-43b9-46b7-990d-abc1f5edc4bb" name="Default" comment="a">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/associates/Associate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/associates/Associate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/employees/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/employees/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/employees/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/employees/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/employees/Medic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/employees/Medic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/employees/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/employees/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/menus/AssociateMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/menus/EmployeeMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/menus/EmployeeMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/menus/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/menus/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/menus/MainMenus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/menus/MainMenus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/menus/ResourcesMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/menus/ResourcesMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/resources/Resource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/resources/Stadium.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/resources/Stadium.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iSoccer/resources/TrainingCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iSoccer/resources/TrainingCenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employees/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employees/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employees/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employees/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employees/Medic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employees/Medic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employees/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employees/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menus/AssociateMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/AssociatesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menus/EmployeeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menus/MainMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/MainMenus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menus/ResourcesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/ResourcesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viewMenus/AssociateView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viewMenus/EmployeeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viewMenus/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viewMenus/ResourceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlMenus/AssociatesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/AssociatesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlMenus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/MainControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlMenus/MainMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/MainMenus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlMenus/ResourcesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlMenus/ResourcesMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,32 +22,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controlMenus/Main.java">
+      <file leaf-file-name="MainControl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controlMenus/MainControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+            <state relative-caret-position="-238">
+              <caret line="202" column="44" selection-start-line="202" selection-start-column="44" selection-end-line="202" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controlMenus/MainMenus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/employees/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -72,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -104,11 +71,20 @@
         <option value="$PROJECT_DIR$/src/menus/MainMenus.java" />
         <option value="$PROJECT_DIR$/src/menus/Main.java" />
         <option value="$PROJECT_DIR$/src/manageMenus/EmployeeMenu.java" />
-        <option value="$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java" />
         <option value="$PROJECT_DIR$/src/employees/Employee.java" />
         <option value="$PROJECT_DIR$/src/employees/Driver.java" />
         <option value="$PROJECT_DIR$/src/employees/Medic.java" />
         <option value="$PROJECT_DIR$/src/employees/Player.java" />
+        <option value="$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java" />
+        <option value="$PROJECT_DIR$/src/viewMenus/EmployeeView.java" />
+        <option value="$PROJECT_DIR$/src/viewMenus/Main.java" />
+        <option value="$PROJECT_DIR$/src/controlMenus/Main.java" />
+        <option value="$PROJECT_DIR$/src/viewMenus/MainView.java" />
+        <option value="$PROJECT_DIR$/src/controlMenus/AssociatesMenu.java" />
+        <option value="$PROJECT_DIR$/src/viewMenus/AssociateView.java" />
+        <option value="$PROJECT_DIR$/src/controlMenus/ResourcesMenu.java" />
+        <option value="$PROJECT_DIR$/src/viewMenus/ResourceView.java" />
+        <option value="$PROJECT_DIR$/src/controlMenus/MainControl.java" />
       </list>
     </option>
   </component>
@@ -117,12 +93,14 @@
     <option name="width" value="1209" />
     <option name="height" value="735" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -140,31 +118,14 @@
               <item name="iSoccer" type="b2602c69:ProjectViewProjectNode" />
               <item name="iSoccer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="associates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iSoccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iSoccer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controlMenus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iSoccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iSoccer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="employees" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iSoccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iSoccer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="viewMenus" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -180,8 +141,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controlMenus.Main" />
+    <configuration name="MainControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controlMenus.MainControl" />
       <module name="iSoccer" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -234,7 +195,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainControl" />
       </list>
     </recent_temporary>
   </component>
@@ -261,25 +222,25 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3290938" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31796503" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="9" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -290,35 +251,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/employees/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/employees/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainMenus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4012">
           <caret line="241" column="83" selection-start-line="241" selection-start-column="83" selection-end-line="241" selection-end-column="83" />
@@ -407,7 +340,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4097">
           <caret line="241" column="83" selection-start-line="241" selection-start-column="83" selection-end-line="241" selection-end-column="83" />
@@ -472,7 +405,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3655">
           <caret line="215" column="67" lean-forward="true" selection-start-line="215" selection-start-column="67" selection-end-line="215" selection-end-column="67" />
@@ -520,7 +453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3655">
           <caret line="215" column="49" lean-forward="true" selection-start-line="215" selection-start-column="49" selection-end-line="215" selection-end-column="49" />
@@ -657,43 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/AssociatesMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="137" column="10" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainMenus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/ResourcesMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="172" column="24" lean-forward="true" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/associates/Associate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -701,32 +597,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="177" column="38" selection-start-line="177" selection-start-column="38" selection-end-line="177" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/employees/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="107" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/employees/Medic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding>
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,8 +621,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/employees/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="17">
           <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/employees/Medic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewMenus/EmployeeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/EmployeeMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainMenus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewMenus/AssociateView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/ResourcesMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewMenus/ResourceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/AssociatesMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewMenus/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlMenus/MainControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="202" column="44" selection-start-line="202" selection-start-column="44" selection-end-line="202" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

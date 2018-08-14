@@ -3,20 +3,24 @@ package controlMenus;
 import associates.Associate;
 import employees.*;
 import resources.*;
+import viewMenus.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class MainControl {
 
-    public static void main(String[] args) {
+    public void mainAll() {
         Scanner input = new Scanner(System.in);
         boolean on = true;
         boolean logged = false;
         MainMenus mainMenu = new MainMenus();
-        EmployeeMenu employeeMenu = new EmployeeMenu();
+        EmployeeMenu employeeControl = new EmployeeMenu();
+        EmployeeView employeeView = new EmployeeView();
         ResourcesMenu resourceMenu = new ResourcesMenu();
+        ResourceView resourceView = new ResourceView();
         AssociatesMenu associateMenu = new AssociatesMenu();
+        AssociateView asssociateView = new AssociateView();
 
         ArrayList<Driver> drivers = new ArrayList();
         ArrayList<Medic> medics = new ArrayList();
@@ -52,11 +56,11 @@ public class Main {
                 String option = input.nextLine();
                 switch (option){
                     case "1":
-                        type = employeeMenu.addEmployeeType();
+                        type = employeeControl.addEmployeeType();
                         switch (type){
                             case "1":
-                                Employee tempEmployee = employeeMenu.createGenericEmployee();
-                                String choice = employeeMenu.especifyEmployeeType();
+                                Employee tempEmployee = employeeControl.createGenericEmployee();
+                                String choice = employeeControl.especifyEmployeeType();
                                 switch (choice){
                                     case "1":
                                         presidents.add(tempEmployee);
@@ -74,22 +78,22 @@ public class Main {
                                         lawyers.add(tempEmployee);
                                         break;
                                 }
-                                employeeMenu.successMessage();
+                                employeeView.successMessage();
                                 break;
                             case "2":
-                                Medic tempMedic = employeeMenu.createMedic();
+                                Medic tempMedic = employeeControl.createMedic();
                                 medics.add(tempMedic);
-                                employeeMenu.successMessage();
+                                employeeView.successMessage();
                                 break;
                             case "3":
-                                Driver tempDriver = employeeMenu.createDriver();
+                                Driver tempDriver = employeeControl.createDriver();
                                 drivers.add(tempDriver);
-                                employeeMenu.successMessage();
+                                employeeView.successMessage();
                                 break;
                             case "4":
-                                Player tempPlayer = employeeMenu.createPlayer();
+                                Player tempPlayer = employeeControl.createPlayer();
                                 players.add(tempPlayer);
-                                employeeMenu.successMessage();
+                                employeeView.successMessage();
                                 break;
                             default:
                                 System.out.println("Invalid option");
@@ -193,10 +197,10 @@ public class Main {
                         type = resourceMenu.manageWhichResource();
                         switch (type){
                             case "1":
-                                resourceMenu.checkBusAvailability(buses);
+                                resourceView.checkBusAvailability(buses);
                                 break;
                             case "2":
-                                resourceMenu.checkStadiumAvailability(stadiums);
+                                resourceView.checkStadiumAvailability(stadiums);
                                 break;
                             case "3":
                                 stadiums = resourceMenu.changeStadiumSupported(stadiums);
@@ -208,7 +212,7 @@ public class Main {
                                 stadiums = resourceMenu.changeStadiumSnacks(stadiums);
                                 break;
                             case "6":
-                                resourceMenu.checkTCAvailability(tcs);
+                                resourceView.checkTCAvailability(tcs);
                                 break;
                         }
                         break;
@@ -216,38 +220,38 @@ public class Main {
                         type = mainMenu.reportMenu();
                         switch (type){
                             case "1":
-                                employeeMenu.listTeam(players,coaches);
+                                employeeView.listTeam(players,coaches);
                                 break;
                             case "2":
-                                employeeMenu.listAblePlayers(players);
+                                employeeView.listAblePlayers(players);
                                 break;
                             case "3":
-                                employeeMenu.listUnablePlayers(players);
+                                employeeView.listUnablePlayers(players);
                                 break;
                             case "4":
-                                employeeMenu.listEmployees(drivers,medics,players,coaches,cooks,lawyers,physicalPreparers,
+                                employeeView.listEmployees(drivers,medics,players,coaches,cooks,lawyers,physicalPreparers,
                                         presidents);
                                 break;
                             case "5":
-                                resourceMenu.showBusesInfo(buses);
+                                resourceView.showBusesInfo(buses);
                                 break;
                             case "6":
-                                resourceMenu.showStadiumInfo(stadiums);
+                                resourceView.showStadiumInfo(stadiums);
                                 break;
                             case "7":
-                                resourceMenu.showTCinfo(tcs);
+                                resourceView.showTCinfo(tcs);
                                 break;
                             case "8":
-                                associateMenu.quantityOfAssociates(juniors,seniors,elites);
+                                asssociateView.quantityOfAssociates(juniors,seniors,elites);
                                 break;
                             case "9":
-                                associateMenu.nonDefaultingAssociates(juniors,seniors,elites);
+                                asssociateView.nonDefaultingAssociates(juniors,seniors,elites);
                                 break;
                             case "10":
-                                associateMenu.defaultingAssociates(juniors,seniors,elites);
+                                asssociateView.defaultingAssociates(juniors,seniors,elites);
                                 break;
                             case "11":
-                                associateMenu.listAssociates(juniors,seniors,elites);
+                                asssociateView.listAssociates(juniors,seniors,elites);
                                 break;
                         }
                         break;

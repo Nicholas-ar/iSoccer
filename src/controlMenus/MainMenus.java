@@ -8,7 +8,7 @@ public class MainMenus {
     private static String adminPassword = "123";
 
     public void mainMenu(){
-        System.out.println("iSoccer - Main");
+        System.out.println("iSoccer - MainView");
         System.out.println("Choose an option:");
         System.out.println("(1)Add employee");
         System.out.println("(2)Add associate");
