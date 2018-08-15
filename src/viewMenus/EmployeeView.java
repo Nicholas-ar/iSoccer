@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class EmployeeView {
 
-    public void successMessage(){
+    public void addEmployeeSuccessMessage(){
         System.out.println("Employee successfully added!");
     }
 

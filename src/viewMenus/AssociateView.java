@@ -5,6 +5,7 @@ import associates.Associate;
 import java.util.ArrayList;
 
 public class AssociateView {
+
     public void quantityOfAssociates(ArrayList<Associate> juniors, ArrayList<Associate> seniors,
                                      ArrayList<Associate> elites) {
         int quantity = 0;
@@ -77,4 +78,9 @@ public class AssociateView {
             elites.get(i).printInfo();
         }
     }
+
+    public void addAssociateSuccessMessage(){
+        System.out.println("Associate successfully added!");
+    }
+
 }

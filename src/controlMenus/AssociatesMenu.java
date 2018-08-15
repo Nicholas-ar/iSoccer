@@ -36,11 +36,7 @@ public class AssociatesMenu {
         return temp;
     }
 
-    public void successMessage(){
-        System.out.println("Associate successfully added!");
-    }
-
-    public String changeAssociateStatus() {
+    public String changeAssociateStatusType() {
         Scanner input = new Scanner(System.in);
         System.out.println("Choose the type of associate to change");
         System.out.println("(1)Junior");
@@ -78,4 +74,16 @@ public class AssociatesMenu {
         return value;
     }
 
+    public ArrayList<Associate> changeAssociateStatus(ArrayList<Associate> associates, String searchCpf) {
+        for (Associate associate : associates) {
+            if (associate.getCpf().equals(searchCpf)) {
+                if (associate.getDefaulter()) {
+                    associate.setDefaulter(false);
+                } else {
+                    associate.setDefaulter(true);
+                }
+            }
+        }
+        return associates;
+    }
 }

@@ -31,7 +31,6 @@ public class Employee {
         System.out.println("Phone number: " + this.getPhoneNumber());
         System.out.println(" " + this.getSalary());
     }
-    //change to toString
 
     public String getFullName() {
         return fullName;

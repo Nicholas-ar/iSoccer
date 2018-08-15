@@ -17,9 +17,9 @@ public class MainControl {
         MainMenus mainMenu = new MainMenus();
         EmployeeMenu employeeControl = new EmployeeMenu();
         EmployeeView employeeView = new EmployeeView();
-        ResourcesMenu resourceMenu = new ResourcesMenu();
+        ResourcesMenu resourceControl = new ResourcesMenu();
         ResourceView resourceView = new ResourceView();
-        AssociatesMenu associateMenu = new AssociatesMenu();
+        AssociatesMenu associateControl = new AssociatesMenu();
         AssociateView asssociateView = new AssociateView();
 
         ArrayList<Driver> drivers = new ArrayList();
@@ -78,22 +78,22 @@ public class MainControl {
                                         lawyers.add(tempEmployee);
                                         break;
                                 }
-                                employeeView.successMessage();
+                                employeeView.addEmployeeSuccessMessage();
                                 break;
                             case "2":
                                 Medic tempMedic = employeeControl.createMedic();
                                 medics.add(tempMedic);
-                                employeeView.successMessage();
+                                employeeView.addEmployeeSuccessMessage();
                                 break;
                             case "3":
                                 Driver tempDriver = employeeControl.createDriver();
                                 drivers.add(tempDriver);
-                                employeeView.successMessage();
+                                employeeView.addEmployeeSuccessMessage();
                                 break;
                             case "4":
                                 Player tempPlayer = employeeControl.createPlayer();
                                 players.add(tempPlayer);
-                                employeeView.successMessage();
+                                employeeView.addEmployeeSuccessMessage();
                                 break;
                             default:
                                 System.out.println("Invalid option");
@@ -102,25 +102,25 @@ public class MainControl {
 
                         break;
                     case "2":
-                        type = associateMenu.addAssociateType();
+                        type = associateControl.addAssociateType();
                         Associate tempAssociate;
                         switch (type){
                             case "1":
-                                tempAssociate = associateMenu.createAssociate();
+                                tempAssociate = associateControl.createAssociate();
                                 juniors.add(tempAssociate);
-                                associateMenu.successMessage();
+                                asssociateView.addAssociateSuccessMessage();
                                 break;
 
                             case "2":
-                                tempAssociate = associateMenu.createAssociate();
+                                tempAssociate = associateControl.createAssociate();
                                 seniors.add(tempAssociate);
-                                associateMenu.successMessage();
+                                asssociateView.addAssociateSuccessMessage();
                                 break;
 
                             case "3":
-                                tempAssociate = associateMenu.createAssociate();
+                                tempAssociate = associateControl.createAssociate();
                                 elites.add(tempAssociate);
-                                associateMenu.successMessage();
+                                asssociateView.addAssociateSuccessMessage();
                                 break;
 
                             default:
@@ -129,41 +129,17 @@ public class MainControl {
                         }
                         break;
                     case "3":
-                        type = associateMenu.changeAssociateStatus();
-                        searchCpf = associateMenu.chooseSearchCpf();
+                        type = associateControl.changeAssociateStatusType();
+                        searchCpf = associateControl.chooseSearchCpf();
                         switch (type){
                             case "1":
-                                for (Associate junior : juniors) {
-                                    if (junior.getCpf().equals(searchCpf)) {
-                                        if (junior.getDefaulter()) {
-                                            junior.setDefaulter(false);
-                                        } else {
-                                            junior.setDefaulter(true);
-                                        }
-                                    }
-                                }
+                                juniors = associateControl.changeAssociateStatus(juniors,searchCpf);
                                 break;
                             case "2":
-                                for (Associate senior : seniors) {
-                                    if (senior.getCpf().equals(searchCpf)) {
-                                        if (senior.getDefaulter()) {
-                                            senior.setDefaulter(false);
-                                        } else {
-                                            senior.setDefaulter(true);
-                                        }
-                                    }
-                                }
+                                seniors = associateControl.changeAssociateStatus(seniors,searchCpf);
                                 break;
                             case "3":
-                                for (Associate elite : elites) {
-                                    if (elite.getCpf().equals(searchCpf)) {
-                                        if (elite.getDefaulter()) {
-                                            elite.setDefaulter(false);
-                                        } else {
-                                            elite.setDefaulter(true);
-                                        }
-                                    }
-                                }
+                                elites = associateControl.changeAssociateStatus(elites,searchCpf);
                                 break;
                             default:
                                 System.out.println("Invalid option.");
@@ -171,30 +147,30 @@ public class MainControl {
 
                         break;
                     case "4":
-                        associateType = associateMenu.changeAssociateContribution();
-                        contributionAmount = associateMenu.newContributionValue();
+                        associateType = associateControl.changeAssociateContribution();
+                        contributionAmount = associateControl.newContributionValue();
                         contributionAmounts[associateType] = contributionAmount;
 
                         break;
                     case "5":
-                        type = resourceMenu.whichResource();
+                        type = resourceControl.whichResource();
                         switch (type){
                             case "1":
-                                Resource tempBus = resourceMenu.createBus();
+                                Resource tempBus = resourceControl.createBus();
                                 buses.add(tempBus);
                                 break;
                             case "2":
-                                Stadium tempStadium = resourceMenu.createStadium();
+                                Stadium tempStadium = resourceControl.createStadium();
                                 stadiums.add(tempStadium);
                                 break;
                             case "3":
-                                TrainingCenter tempTC = resourceMenu.createTC();
+                                TrainingCenter tempTC = resourceControl.createTC();
                                 tcs.add(tempTC);
                                 break;
                         }
                         break;
                     case "6":
-                        type = resourceMenu.manageWhichResource();
+                        type = resourceControl.manageWhichResource();
                         switch (type){
                             case "1":
                                 resourceView.checkBusAvailability(buses);
@@ -203,13 +179,13 @@ public class MainControl {
                                 resourceView.checkStadiumAvailability(stadiums);
                                 break;
                             case "3":
-                                stadiums = resourceMenu.changeStadiumSupported(stadiums);
+                                stadiums = resourceControl.changeStadiumSupported(stadiums);
                                 break;
                             case "4":
-                                stadiums = resourceMenu.changeStadiumRestrooms(stadiums);
+                                stadiums = resourceControl.changeStadiumRestrooms(stadiums);
                                 break;
                             case "5":
-                                stadiums = resourceMenu.changeStadiumSnacks(stadiums);
+                                stadiums = resourceControl.changeStadiumSnacks(stadiums);
                                 break;
                             case "6":
                                 resourceView.checkTCAvailability(tcs);
